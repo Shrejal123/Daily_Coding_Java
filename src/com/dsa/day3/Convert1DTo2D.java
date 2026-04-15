@@ -1,0 +1,25 @@
+package com.dsa.day3;
+
+public class Convert1DTo2D {
+
+        public int[][] construct2DArray(int[] original, int m, int n) {
+            int[][] arr = new int[m][n];
+
+            int k=0,p=original.length;
+
+            if(m*n!=p){
+                return new int[0][0];
+            }
+            for(int i=0;i<m;i++){
+
+                for(int j=0;j<n && k<p;j++){
+                    arr[i][j] = original[k];
+                    k++;
+                }
+
+            }
+            return arr;
+        }
+    }
+
+
